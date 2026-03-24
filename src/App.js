@@ -17,7 +17,7 @@ function App() {
 
   const loadProducts = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/products');
+      const res = await fetch('https://stocksync-api.onrender.com/api/products');
       const data = await res.json();
       setProducts(data);
     } catch (err) {
