@@ -6,7 +6,7 @@ function Orders({ user }) {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/orders/${user.id}`);
+        const res = await fetch(`https://stocksync-api.onrender.com/api/orders/${user.id}`);
         const data = await res.json();
         setOrders(data);
       } catch (err) {

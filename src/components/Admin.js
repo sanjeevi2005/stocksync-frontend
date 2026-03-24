@@ -23,7 +23,7 @@ function Admin({ products, loadProducts }) {
   };
 
   const handleDeleteStock = async (id) => {
-    await fetch(`http://localhost:5000/api/products/${id}`, { method: 'DELETE' });
+    await fetch(`https://stocksync-api.onrender.com/api/products/${id}`, { method: 'DELETE' });
     loadProducts(); 
   };
 

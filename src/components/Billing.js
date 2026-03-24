@@ -34,7 +34,7 @@ function Billing({ user, cart, setCart, setView }) {
   const handleCheckout = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/billing', {
+      const res = await fetch('https://stocksync-api.onrender.com/api/billing', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.id, total: cartTotal, address, cartItems: cart }) 
