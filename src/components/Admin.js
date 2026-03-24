@@ -7,7 +7,7 @@ function Admin({ products, loadProducts }) {
 
   const handleAddStock = async (e) => {
     e.preventDefault();
-    await fetch('http://localhost:5000/api/products', {
+    await fetch('https://stocksync-api.onrender.com/api/products', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
